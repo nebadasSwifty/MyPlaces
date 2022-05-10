@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,12 +32,27 @@
                                                     <rect key="frame" x="0.0" y="1" width="374" height="247.5"/>
                                                     <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rc1-c7-JO6">
+                                                    <rect key="frame" x="318" y="200" width="56" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="maf-0F-272"/>
+                                                        <constraint firstAttribute="height" constant="50" id="v3Y-eZ-NkC"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="map"/>
+                                                    <connections>
+                                                        <segue destination="N2E-Zw-yNB" kind="presentation" identifier="showMap" modalPresentationStyle="fullScreen" id="nuW-Mx-bOU"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="rc1-c7-JO6" secondAttribute="trailing" id="9FL-Ih-Bcf"/>
                                                 <constraint firstAttribute="bottom" secondItem="Uzw-qU-ozg" secondAttribute="bottom" id="F0P-6x-oFc"/>
                                                 <constraint firstItem="Uzw-qU-ozg" firstAttribute="leading" secondItem="aZu-9Q-AtZ" secondAttribute="leading" id="OXg-bS-DDG"/>
                                                 <constraint firstAttribute="trailing" secondItem="Uzw-qU-ozg" secondAttribute="trailing" id="YDF-ux-Y9r"/>
+                                                <constraint firstItem="rc1-c7-JO6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aZu-9Q-AtZ" secondAttribute="leading" constant="20" symbolic="YES" id="tHs-8O-Ph6"/>
                                                 <constraint firstItem="Uzw-qU-ozg" firstAttribute="top" secondItem="aZu-9Q-AtZ" secondAttribute="top" id="vvg-iK-BMI"/>
+                                                <constraint firstAttribute="bottom" secondItem="rc1-c7-JO6" secondAttribute="bottom" id="xTp-1f-HSg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -197,6 +213,53 @@
             </objects>
             <point key="canvasLocation" x="2661" y="62"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="zlG-fy-wpS">
+            <objects>
+                <viewController id="N2E-Zw-yNB" customClass="MapViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oil-T2-on0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZTH-y5-O9e">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPb-O2-oZ0">
+                                <rect key="frame" x="14" y="64" width="56" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Lgd-6S-ajo"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="e2E-RV-fRW"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <imageReference key="image" image="left-chevron" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeMap:" destination="N2E-Zw-yNB" eventType="touchUpInside" id="VUo-zo-kaI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HDb-Rz-sSv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rPb-O2-oZ0" firstAttribute="top" secondItem="Oil-T2-on0" secondAttribute="topMargin" constant="20" id="14A-ut-Azr"/>
+                            <constraint firstAttribute="bottom" secondItem="ZTH-y5-O9e" secondAttribute="bottom" id="Hl0-ed-3df"/>
+                            <constraint firstItem="ZTH-y5-O9e" firstAttribute="leading" secondItem="HDb-Rz-sSv" secondAttribute="leading" id="J01-0X-d53"/>
+                            <constraint firstItem="rPb-O2-oZ0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HDb-Rz-sSv" secondAttribute="leading" id="QPt-bY-9vP"/>
+                            <constraint firstItem="HDb-Rz-sSv" firstAttribute="trailing" secondItem="rPb-O2-oZ0" secondAttribute="trailing" constant="344" id="S2B-ju-ifm"/>
+                            <constraint firstItem="ZTH-y5-O9e" firstAttribute="top" secondItem="Oil-T2-on0" secondAttribute="top" id="ZNy-1k-OId"/>
+                            <constraint firstItem="ZTH-y5-O9e" firstAttribute="trailing" secondItem="HDb-Rz-sSv" secondAttribute="trailing" id="ZxR-vo-EMP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="ZTH-y5-O9e" id="46f-QZ-nyq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cV1-gw-bRP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3479.7101449275365" y="60.9375"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="aFy-kE-Nge">
             <objects>
@@ -206,7 +269,7 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -372,6 +435,8 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.down" catalog="system" width="120" height="128"/>
+        <image name="left-chevron" width="32" height="32"/>
+        <image name="map" width="32" height="32"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
