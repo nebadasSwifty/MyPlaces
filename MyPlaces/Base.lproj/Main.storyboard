@@ -245,34 +245,45 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="VEz-Z0-3Ns">
-                                                    <rect key="frame" x="96" y="8" width="302" height="69"/>
+                                                    <rect key="frame" x="96" y="8" width="174" height="69"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vu-yh-jqn">
-                                                            <rect key="frame" x="0.0" y="0.0" width="302" height="24.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="174" height="24.5"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOq-Yv-Ir0">
-                                                            <rect key="frame" x="0.0" y="27.5" width="302" height="20"/>
+                                                            <rect key="frame" x="0.0" y="27.5" width="174" height="20"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xst-zu-3jR">
-                                                            <rect key="frame" x="0.0" y="50.5" width="302" height="18.5"/>
+                                                            <rect key="frame" x="0.0" y="50.5" width="174" height="18.5"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMk-66-rNS" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
+                                                    <rect key="frame" x="294" y="31" width="100" height="24"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                                            <size key="value" width="20" height="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="VEz-Z0-3Ns" firstAttribute="leading" secondItem="LYF-EA-LbL" secondAttribute="trailing" constant="16" id="00T-mx-ZIm"/>
                                                 <constraint firstItem="LYF-EA-LbL" firstAttribute="centerY" secondItem="jRo-uP-zBe" secondAttribute="centerY" id="0Kz-Cn-z6N"/>
+                                                <constraint firstItem="JMk-66-rNS" firstAttribute="top" secondItem="jRo-uP-zBe" secondAttribute="topMargin" constant="20" id="5M2-BS-lfp"/>
+                                                <constraint firstItem="JMk-66-rNS" firstAttribute="leading" secondItem="VEz-Z0-3Ns" secondAttribute="trailing" constant="24" id="5XA-1O-aUy"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="JMk-66-rNS" secondAttribute="bottom" constant="19" id="OJg-nf-i6f"/>
                                                 <constraint firstAttribute="bottom" secondItem="VEz-Z0-3Ns" secondAttribute="bottom" constant="8" id="OcK-U7-FCu"/>
-                                                <constraint firstAttribute="trailing" secondItem="VEz-Z0-3Ns" secondAttribute="trailing" constant="16" id="aOF-6g-WOn"/>
+                                                <constraint firstItem="JMk-66-rNS" firstAttribute="trailing" secondItem="jRo-uP-zBe" secondAttribute="trailingMargin" id="V4a-wS-aOF"/>
                                                 <constraint firstItem="VEz-Z0-3Ns" firstAttribute="top" secondItem="jRo-uP-zBe" secondAttribute="top" constant="8" id="sxQ-To-PIz"/>
                                                 <constraint firstItem="LYF-EA-LbL" firstAttribute="leading" secondItem="jRo-uP-zBe" secondAttribute="leading" constant="15" id="ucu-1r-tTl"/>
                                             </constraints>
@@ -281,6 +292,7 @@
                                             <outlet property="imageOfPlace" destination="LYF-EA-LbL" id="DuM-Mg-hZh"/>
                                             <outlet property="locationLabel" destination="jOq-Yv-Ir0" id="6wO-YD-rIE"/>
                                             <outlet property="nameLabel" destination="3vu-yh-jqn" id="rvE-TY-gSN"/>
+                                            <outlet property="ratingControl" destination="JMk-66-rNS" id="jN5-ap-KMa"/>
                                             <outlet property="typeLabel" destination="Xst-zu-3jR" id="51d-J0-bAD"/>
                                             <segue destination="Uve-oN-Qeg" kind="show" identifier="showDetail" id="CNi-cZ-4ZQ"/>
                                         </connections>
