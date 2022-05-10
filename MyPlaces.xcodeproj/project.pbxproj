@@ -18,6 +18,7 @@
 		EDFC34322828678900904F6C /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFC34312828678900904F6C /* PlaceModel.swift */; };
 		EDFC34342828724E00904F6C /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFC34332828724E00904F6C /* NewPlaceViewController.swift */; };
 		EDFC3436282914EC00904F6C /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFC3435282914EC00904F6C /* StorageManager.swift */; };
+		EDFC343828294F5500904F6C /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFC343728294F5500904F6C /* RatingControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		EDFC34312828678900904F6C /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		EDFC34332828724E00904F6C /* NewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
 		EDFC3435282914EC00904F6C /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		EDFC343728294F5500904F6C /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				EDFC341F2827FACC00904F6C /* Main.storyboard */,
 				EDFC34332828724E00904F6C /* NewPlaceViewController.swift */,
 				EDFC342F2828146600904F6C /* CustomTableViewCell.swift */,
+				EDFC343728294F5500904F6C /* RatingControl.swift */,
 				EDFC342D2827FE5900904F6C /* MainTableView.swift */,
 				EDFC34312828678900904F6C /* PlaceModel.swift */,
 				EDFC3435282914EC00904F6C /* StorageManager.swift */,
@@ -221,6 +224,7 @@
 				EDFC342E2827FE5900904F6C /* MainTableView.swift in Sources */,
 				EDFC34342828724E00904F6C /* NewPlaceViewController.swift in Sources */,
 				EDFC341A2827FACC00904F6C /* AppDelegate.swift in Sources */,
+				EDFC343828294F5500904F6C /* RatingControl.swift in Sources */,
 				EDFC3436282914EC00904F6C /* StorageManager.swift in Sources */,
 				EDFC34322828678900904F6C /* PlaceModel.swift in Sources */,
 				EDFC34302828146600904F6C /* CustomTableViewCell.swift in Sources */,
